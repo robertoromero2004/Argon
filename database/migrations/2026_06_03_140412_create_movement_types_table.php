@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('movement_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('name',50);
+            $table->string('name',50) ->unique();
             $table->string('description',50);
         });
     }

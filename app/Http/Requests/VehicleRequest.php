@@ -11,7 +11,7 @@ class VehicleRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,14 @@ class VehicleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'license_plate' => 'required|string|max:20|unique:vehicles,license_plate',
+            'model' => 'required|string|max:50',
+            'brand' => 'required|string|max:50',
+            'year' => 'required|integer|min:1900|max:' . date('Y'),
+            'color' => 'required|string|max:30',
+            'capacity' => 'required|integer|min:1',
+            'status' => 'required|in:available,unavailable,maintenance',
+            'vehicle_type_id' => 'required|exists:vehicle_types,id',
         ];
     }
 }

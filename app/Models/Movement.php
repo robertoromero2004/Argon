@@ -18,12 +18,12 @@ class Movement extends Model
     ];
 
     public function movement_report() : BelongsToMany {
-        return $this -> belongsToMany(Movement_Report::class);
+        return $this -> belongsToMany(MovementReport::class);
     }
 
 
     public function movement_type() : belongsTo {
-        return $this -> belongsTo(Movement_Type::class);
+        return $this -> belongsTo(MovementType::class);
     }
 
     public function product() : HasMany {

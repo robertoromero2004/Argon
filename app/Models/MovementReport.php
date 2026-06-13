@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class Movement_Report extends Model
+class MovementReport extends Model
 {
     protected $fillable = [
         'date',

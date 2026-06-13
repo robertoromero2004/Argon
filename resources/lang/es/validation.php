@@ -23,7 +23,6 @@ return [
     'email_address'=>'correo electrónico',
     'physicall_address'=>'dirección física',
     'company_name'=>'nombre de la empresa',
-    'date'=>'fecha',
     'time'=>'hora',
     'quantity'=>'cantidad',
     'status'=>'estado',

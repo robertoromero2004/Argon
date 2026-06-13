@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Vehicle_Type extends Model
+class VehicleType extends Model
 {
     protected $fillable = [
         'name',

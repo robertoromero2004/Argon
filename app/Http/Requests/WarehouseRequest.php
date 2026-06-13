@@ -11,7 +11,7 @@ class WarehouseRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,12 @@ class WarehouseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:50 |unique:warehouses,name',
+            'location' => 'required|string|max:100',
+            'current_product_stock' => 'required|integer|min:0',
+            'avalability_status' => 'required|in:available,unavailable',
+            'manager_name' => 'required|string|max:50',
+            'capacity' => 'required|integer|min:1',
         ];
     }
 }

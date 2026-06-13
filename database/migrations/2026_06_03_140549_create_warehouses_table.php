@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('warehouses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('name', 50);
-            $table->string('current_product_stock', 10);
+            $table->string('name', 50) ->unique();
+            $table->integer('current_product_stock', 10);       
             $table->string('capacity', 10);
             $table->enum('availability',['available', 'unavailable']);
-            $table->string('manager_name', 50);
-            $table->string('location', 150);
+            $table->string('manager_name', 50) ->unique();
+            $table->string('location', 150) ->unique();
         });
     }
 

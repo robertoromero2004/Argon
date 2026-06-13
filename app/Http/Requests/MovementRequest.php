@@ -11,7 +11,7 @@ class MovementRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,13 @@ class MovementRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:50',
+            'date' => 'required|date',
+            'time' => 'required',
+            'quantity' => 'required|integer|min:1',
+            'status' => 'required|in:Entrada,Salida',
+            'movement_type_id' => 'required|exists:movement_types,id',
+           
         ];
     }
 }

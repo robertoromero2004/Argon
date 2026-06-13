@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-class Movement_Type extends Model
+class MovementType extends Model
 {
     protected $fillable = [
             'name',

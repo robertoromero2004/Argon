@@ -16,12 +16,12 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name',50);
             $table->string('surname',50);
-            $table->string('card_id',14);
-            $table->string('phone_number',8);
+            $table->string('card_id',14) ->unique();
+            $table->string('phone_number',8) ->unique();
             $table->string('company_name',25);
             $table->enum('nationality',['Nicaraguan', 'Honduran', 'Cuban', 'Venezolan', 'Haitian']);
-            $table->string('email_address',30);
-            $table->string('physicall_address',50);
+            $table->string('email_address',30) ->unique();
+            $table->string('physicall_address',50) ->unique();
         });
     }
 

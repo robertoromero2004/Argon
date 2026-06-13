@@ -19,6 +19,7 @@ class Employee extends Model
         'hire_date',
         'education_level',
         'marital_state',
+        'email_address',
     ];
 
     public function vehicles() : Hasone {
@@ -26,6 +27,6 @@ class Employee extends Model
     } 
 
     public function movement_report() : BelongsToMany {
-        return $this -> belongsToMany(Movement_Report::class);
+        return $this -> belongsToMany(MovementReport::class);
     }
 }

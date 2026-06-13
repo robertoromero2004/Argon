@@ -18,12 +18,13 @@ return new class extends Migration
             $table->string('surname',50);
             $table->string('card_id',14) -> unique();
             $table->string('phone_number',8) ->unique();
-            $table->string('driver_licence',14) ->unique();
+            $table->string('driver_licence',14) ->unique() ->nullable();
             $table->enum('nationality',['Nicaraguan', 'Honduran', 'Cuban', 'Venezolan', 'Haitian']);
             $table->string('role',20);
             $table->date('hire_date');
             $table->string('education_level',25) -> nullable();
             $table->enum('marital_state',['single', 'married', 'divorced', 'widowed', 'common_law_relationship']);
+            $table->string('email_address',30) -> unique();
 
             
         });

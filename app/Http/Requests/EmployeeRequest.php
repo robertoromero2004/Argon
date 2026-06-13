@@ -26,12 +26,14 @@ class EmployeeRequest extends FormRequest
             'surname' => 'required|string|max:50',
             'card_id' => 'required|string|max:14|unique:employees,card_id',
             'phone_number' => 'required|string|max:8|unique:employees,phone_number',
-            'driver_licence' => 'required|string|max:14|unique:employees,driver_licence',
+            'driver_licence' => 'required|string|max:14|unique:employees,driver_licence |nullable',
             'nationality' => 'required|in:Nicaraguan,Honduran,Cuban,Venezolan,Haitian',
             'role' => 'required|string|max:20',
             'hire_date' => 'required|date',
-            'education_level' => 'required|string|max:50',
+            'education_level' => 'required|string|max:50 |nullable',
             'marital_state' => 'required|in:Single,Married,Divorced,Widowed',
+            'email_address' => 'required|string|max:30|unique:employees,email_address',
+
         ];
     }
 }

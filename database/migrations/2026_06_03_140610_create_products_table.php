@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('name',50);
+            $table->string('name',50) ->unique();
             $table->date('expiry_date');
             $table->string('unit_of_measure',6 );
             $table->string('quantity',12);
-            $table->string('material');
+            $table->string('material') ->nullable();
             $table->string('current_stock_quantity',15);
             $table->string('minimun_allowed_quantity', 10);
             

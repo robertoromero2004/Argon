@@ -16,10 +16,10 @@ return new class extends Migration
             $table->timestamps();
             $table->string('brand',20);
             $table->string('model',20);
-            $table->string('plate_number',20);
+            $table->string('plate_number',20) ->unique();
             $table->integer('year');
             $table->string('capcity');
-            $table->string('owner');
+            $table->string('owner') ->nullable();
 
             $table->foreignId("employee_id")->constrained("employees")->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId("vehicle_type_id")->constrained("vehicles")->cascadeOnUpdate()->cascadeOnDelete();
