@@ -3,22 +3,27 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use PhpParser\Builder\Function_;
 
 class Vehicle extends Model
 {
     protected $fillable = [
-
+        'license_plate',
+        'brand',
+        'model',
+        'color',
+        'year',
+        'owner',
     ];
 
-    public Function employee() : HasOne{
-        return $this -> hasOne(Employee::class);
+    public Function employee() : belongsTo {
+        return $this -> belongsTo(Employee::class);
     }
 
-    public function vehicle_type() : HasMany {
-        return $this -> hasMany(Vehicle_Type::class);
+    public function vehicle_type() : belongsTo {
+        return $this -> belongsTo (Vehicle_Type::class);
     }
 
 }

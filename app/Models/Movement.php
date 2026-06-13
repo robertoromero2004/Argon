@@ -5,11 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Movement extends Model
 {
     protected $fillable = [
-
+        'name',
+        'date', 
+        'time',
+        'quantity',
+        'status', 
     ];
 
     public function movement_report() : BelongsToMany {
@@ -17,8 +22,8 @@ class Movement extends Model
     }
 
 
-    public function movement_type() : HasMany {
-        return $this -> hasMany(Movement_Type::class);
+    public function movement_type() : belongsTo {
+        return $this -> belongsTo(Movement_Type::class);
     }
 
     public function product() : HasMany {

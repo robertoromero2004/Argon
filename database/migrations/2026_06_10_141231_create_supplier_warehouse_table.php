@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('warehouses_suppliers', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('supplier_warehouse', function (Blueprint $table) {
 
             $table->foreignId("warehouse_id")->constrained("warehouses")->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId("supplier_id")->constrained("suppliers")->cascadeOnUpdate()->cascadeOnDelete();
 
+            $table->primary(["supplier_id", "warehouse_id"]);
 
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('warehouses_suppliers');
+        Schema::dropIfExists('supplier_warehouse');
     }
 };

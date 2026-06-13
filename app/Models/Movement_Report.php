@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Movement_Report extends Model
 {
     protected $fillable = [
-
+        'date',
+        'time',
     ];
 
     public function employee() : BelongsToMany {
