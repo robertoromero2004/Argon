@@ -30,19 +30,8 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
 
 
- //? index
-Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
-Route::get('/movements', [MovementController::class, 'index'])->name('movements.index');
-Route::get('/movement-reports', [MovementReportController::class, 'index'])->name('movement-reports.index');
-Route::get('/movement-types', [MovementTypeController::class, 'index'])->name('movement-types.index');
-Route::get('/product-types', [ProductTypeController::class, 'index'])->name('product-types.index');
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::get('/suppliers', [SupplierController::class, 'index'])->name('suppliers.index');
-Route::get('/vehicles', [VehicleController::class, 'index'])->name('vehicles.index');
-Route::get('/vehicle-types', [VehicleTypeController::class, 'index'])->name('vehicle-types.index');
-Route::get('/warehouses', [WarehouseController::class, 'index'])->name('warehouses.index');
-
 //?employee
+Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
 Route::get('/employees/create', [EmployeeController::class, 'create'])->name('employees.create');
 Route::post('/employees', [EmployeeController::class, 'store'])->name('employees.store');
 Route::get('/employees/{id}', [EmployeeController::class, 'show'])->name('employees.show');
@@ -52,6 +41,7 @@ Route::delete('/employees/{id}', [EmployeeController::class, 'destroy'])->name('
 
 
 //?movement
+Route::get('/movements', [MovementController::class, 'index'])->name('movements.index');
 Route::get('/movements/create', [MovementController::class, 'create'])->name('movements.create');
 Route::post('/movements', [MovementController::class, 'store'])->name('movements.store');
 Route::get('/movements/{id}', [MovementController::class, 'show'])->name('movements.show');
@@ -60,6 +50,7 @@ Route::put('/movements/{id}', [MovementController::class, 'update'])->name('move
 Route::delete('/movements/{id}', [MovementController::class, 'destroy'])->name('movements.destroy');
 
 //?movement_report
+Route::get('/movement_reports', [MovementReportController::class, 'index'])->name('movement-reports.index');
 Route::get('/movement_reports/create', [MovementReportController::class, 'create'])->name('movement-reports.create');
 Route::post('/movement_reports', [MovementReportController::class, 'store'])->name('movement-reports.store');
 Route::get('/movement_reports/{id}', [MovementReportController::class, 'show'])->name('movement-reports.show');
@@ -67,7 +58,8 @@ Route::get('/movement_reports/{id}/edit', [MovementReportController::class, 'edi
 Route::put('/movement_reports/{id}', [MovementReportController::class, 'update'])->name('movement-reports.update');
 Route::delete('/movement_reports/{id}', [MovementReportController::class, 'destroy'])->name('movement-reports.destroy');
 
-//?movement_type    
+//?movement_type   
+Route::get('/movement-types', [MovementTypeController::class, 'index'])->name('movement-types.index');
 Route::get('/movement_types/create', [MovementTypeController::class, 'create'])->name('movement-types.create');
 Route::post('/movement_types', [MovementTypeController::class, 'store'])->name('movement-types.store');
 Route::get('/movement_types/{id}', [MovementTypeController::class, 'show'])->name('movement-types.show');
@@ -76,6 +68,7 @@ Route::put('/movement_types/{id}', [MovementTypeController::class, 'update'])->n
 Route::delete('/movement_types/{id}', [MovementTypeController::class, 'destroy'])->name('movement-types.destroy');
 
 //?product_type
+Route::get('/product-types', [ProductTypeController::class, 'index'])->name('product-types.index');
 Route::get('/product_types/create', [ProductTypeController::class, 'create'])->name('product-types.create');
 Route::post('/product_types', [ProductTypeController::class, 'store'])->name('product-types.store');
 Route::get('/product_types/{id}', [ProductTypeController::class, 'show'])->name('product-types.show');
@@ -84,6 +77,7 @@ Route::put('/product_types/{id}', [ProductTypeController::class, 'update'])->nam
 Route::delete('/product_types/{id}', [ProductTypeController::class, 'destroy'])->name('product-types.destroy'); 
 
 //?product
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
 Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
@@ -92,6 +86,7 @@ Route::put('/products/{id}', [ProductController::class, 'update'])->name('produc
 Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
 //?supplier
+Route::get('/suppliers', [SupplierController::class, 'index'])->name('suppliers.index');
 Route::get('/suppliers/create', [SupplierController::class, 'create'])->name('suppliers.create');
 Route::post('/suppliers', [SupplierController::class, 'store'])->name('suppliers.store');
 Route::get('/suppliers/{id}', [SupplierController::class, 'show'])->name('suppliers.show');
@@ -100,6 +95,7 @@ Route::put('/suppliers/{id}', [SupplierController::class, 'update'])->name('supp
 Route::delete('/suppliers/{id}', [SupplierController::class, 'destroy'])->name('suppliers.destroy');
 
 //?vehicle
+Route::get('/vehicles', [VehicleController::class, 'index'])->name('vehicles.index');
 Route::get('/vehicles/create', [VehicleController::class, 'create'])->name('vehicles.create');
 Route::post('/vehicles', [VehicleController::class, 'store'])->name('vehicles.store');
 Route::get('/vehicles/{id}', [VehicleController::class, 'show'])->name('vehicles.show');
@@ -108,6 +104,7 @@ Route::put('/vehicles/{id}', [VehicleController::class, 'update'])->name('vehicl
 Route::delete('/vehicles/{id}', [VehicleController::class, 'destroy'])->name('vehicles.destroy');
 
 //?vehicle_type
+Route::get('/vehicle_types', [VehicleTypeController::class, 'index'])->name('vehicle-types.index');
 Route::get('/vehicle_types/create', [VehicleTypeController::class, 'create'])->name('vehicle-types.create');
 Route::post('/vehicle_types', [VehicleTypeController::class, 'store'])->name('vehicle-types.store');
 Route::get('/vehicle_types/{id}', [VehicleTypeController::class, 'show'])->name('vehicle-types.show');
@@ -117,6 +114,7 @@ Route::delete('/vehicle_types/{id}', [VehicleTypeController::class, 'destroy'])-
 
 
 //?warehouse
+Route::get('/warehouses', [WarehouseController::class, 'index'])->name('warehouses.index');
 Route::get('/warehouses/create', [WarehouseController::class, 'create'])->name('warehouses.create');
 Route::post('/warehouses', [WarehouseController::class, 'store'])->name('warehouses.store');
 Route::get('/warehouses/{id}', [WarehouseController::class, 'show'])->name('warehouses.show');
