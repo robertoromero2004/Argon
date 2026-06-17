@@ -26,7 +26,7 @@ class EmployeeRequest extends FormRequest
             'surname' => 'required|string|max:50',
             'card_id' => 'required|string|max:14|unique:employees,card_id',
             'phone_number' => 'required|string|max:8|unique:employees,phone_number',
-            'driver_licence' => 'required|string|max:14|unique:employees,driver_licence |nullable',
+            'driver_licence' => 'string|max:14|unique:employees,driver_licence |nullable',
             'nationality' => 'required|in:Nicaraguan,Honduran,Cuban,Venezolan,Haitian',
             'role' => 'required|string|max:20',
             'hire_date' => 'required|date',

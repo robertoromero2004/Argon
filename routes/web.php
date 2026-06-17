@@ -50,31 +50,31 @@ Route::put('/movements/{id}', [MovementController::class, 'update'])->name('move
 Route::delete('/movements/{id}', [MovementController::class, 'destroy'])->name('movements.destroy');
 
 //?movement_report
-Route::get('/movement_reports', [MovementReportController::class, 'index'])->name('movement-reports.index');
-Route::get('/movement_reports/create', [MovementReportController::class, 'create'])->name('movement-reports.create');
-Route::post('/movement_reports', [MovementReportController::class, 'store'])->name('movement-reports.store');
-Route::get('/movement_reports/{id}', [MovementReportController::class, 'show'])->name('movement-reports.show');
-Route::get('/movement_reports/{id}/edit', [MovementReportController::class, 'edit'])->name('movement-reports.edit');
-Route::put('/movement_reports/{id}', [MovementReportController::class, 'update'])->name('movement-reports.update');
-Route::delete('/movement_reports/{id}', [MovementReportController::class, 'destroy'])->name('movement-reports.destroy');
+Route::get('/movement_reports', [MovementReportController::class, 'index'])->name('movement_reports.index');
+Route::get('/movement_reports/create', [MovementReportController::class, 'create'])->name('movement_reports.create');
+Route::post('/movement_reports', [MovementReportController::class, 'store'])->name('movement_reports.store');
+Route::get('/movement_reports/{id}', [MovementReportController::class, 'show'])->name('movement_reports.show');
+Route::get('/movement_reports/{id}/edit', [MovementReportController::class, 'edit'])->name('movement_reports.edit');
+Route::put('/movement_reports/{id}', [MovementReportController::class, 'update'])->name('movement_reports.update');
+Route::delete('/movement_reports/{id}', [MovementReportController::class, 'destroy'])->name('movement_reports.destroy');
 
 //?movement_type   
-Route::get('/movement-types', [MovementTypeController::class, 'index'])->name('movement-types.index');
-Route::get('/movement_types/create', [MovementTypeController::class, 'create'])->name('movement-types.create');
-Route::post('/movement_types', [MovementTypeController::class, 'store'])->name('movement-types.store');
-Route::get('/movement_types/{id}', [MovementTypeController::class, 'show'])->name('movement-types.show');
-Route::get('/movement_types/{id}/edit', [MovementTypeController::class, 'edit'])->name('movement-types.edit');
-Route::put('/movement_types/{id}', [MovementTypeController::class, 'update'])->name('movement-types.update');
-Route::delete('/movement_types/{id}', [MovementTypeController::class, 'destroy'])->name('movement-types.destroy');
+Route::get('/movement-types', [MovementTypeController::class, 'index'])->name('movement_types.index');
+Route::get('/movement_types/create', [MovementTypeController::class, 'create'])->name('movement_types.create');
+Route::post('/movement_types', [MovementTypeController::class, 'store'])->name('movement_types.store');
+Route::get('/movement_types/{id}', [MovementTypeController::class, 'show'])->name('movement_types.show');
+Route::get('/movement_types/{id}/edit', [MovementTypeController::class, 'edit'])->name('movement_types.edit');
+Route::put('/movement_types/{id}', [MovementTypeController::class, 'update'])->name('movement_types.update');
+Route::delete('/movement_types/{id}', [MovementTypeController::class, 'destroy'])->name('movement_types.destroy');
 
 //?product_type
-Route::get('/product-types', [ProductTypeController::class, 'index'])->name('product-types.index');
-Route::get('/product_types/create', [ProductTypeController::class, 'create'])->name('product-types.create');
-Route::post('/product_types', [ProductTypeController::class, 'store'])->name('product-types.store');
-Route::get('/product_types/{id}', [ProductTypeController::class, 'show'])->name('product-types.show');
-Route::get('/product_types/{id}/edit', [ProductTypeController::class, 'edit'])->name('product-types.edit');
-Route::put('/product_types/{id}', [ProductTypeController::class, 'update'])->name('product-types.update');
-Route::delete('/product_types/{id}', [ProductTypeController::class, 'destroy'])->name('product-types.destroy'); 
+Route::get('/product-types', [ProductTypeController::class, 'index'])->name('product_types.index');
+Route::get('/product_types/create', [ProductTypeController::class, 'create'])->name('product_types.create');
+Route::post('/product_types', [ProductTypeController::class, 'store'])->name('product_types.store');
+Route::get('/product_types/{id}', [ProductTypeController::class, 'show'])->name('product_types.show');
+Route::get('/product_types/{id}/edit', [ProductTypeController::class, 'edit'])->name('product_types.edit');
+Route::put('/product_types/{id}', [ProductTypeController::class, 'update'])->name('product_types.update');
+Route::delete('/product_types/{id}', [ProductTypeController::class, 'destroy'])->name('product_types.destroy'); 
 
 //?product
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
@@ -104,13 +104,13 @@ Route::put('/vehicles/{id}', [VehicleController::class, 'update'])->name('vehicl
 Route::delete('/vehicles/{id}', [VehicleController::class, 'destroy'])->name('vehicles.destroy');
 
 //?vehicle_type
-Route::get('/vehicle_types', [VehicleTypeController::class, 'index'])->name('vehicle-types.index');
-Route::get('/vehicle_types/create', [VehicleTypeController::class, 'create'])->name('vehicle-types.create');
-Route::post('/vehicle_types', [VehicleTypeController::class, 'store'])->name('vehicle-types.store');
-Route::get('/vehicle_types/{id}', [VehicleTypeController::class, 'show'])->name('vehicle-types.show');
-Route::get('/vehicle_types/{id}/edit', [VehicleTypeController::class, 'edit'])->name('vehicle-types.edit');
-Route::put('/vehicle_types/{id}', [VehicleTypeController::class, 'update'])->name('vehicle-types.update');
-Route::delete('/vehicle_types/{id}', [VehicleTypeController::class, 'destroy'])->name('vehicle-types.destroy');
+Route::get('/vehicle_types', [VehicleTypeController::class, 'index'])->name('vehicle_types.index');
+Route::get('/vehicle_types/create', [VehicleTypeController::class, 'create'])->name('vehicle_types.create');
+Route::post('/vehicle_types', [VehicleTypeController::class, 'store'])->name('vehicle_types.store');
+Route::get('/vehicle_types/{id}', [VehicleTypeController::class, 'show'])->name('vehicle_types.show');
+Route::get('/vehicle_types/{id}/edit', [VehicleTypeController::class, 'edit'])->name('vehicle_types.edit');
+Route::put('/vehicle_types/{id}', [VehicleTypeController::class, 'update'])->name('vehicle_types.update');
+Route::delete('/vehicle_types/{id}', [VehicleTypeController::class, 'destroy'])->name('vehicle_types.destroy');
 
 
 //?warehouse
