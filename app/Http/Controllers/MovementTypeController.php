@@ -19,7 +19,7 @@ class MovementTypeController extends Controller
     
         public function store(Request $request) {
             MovementType::create($request->validated());
-            return redirect()->route('movement_type.index')->with('success', 'Movement Type created successfully.');
+            return redirect()->route('movement_types.index')->with('success', 'Movement Type created successfully.');
         }
     
         public function show(string $id) {
@@ -35,11 +35,11 @@ class MovementTypeController extends Controller
         public function update(Request $request, string $id) {
             $movementType = MovementType::findOrFail($id);
             $movementType->update($request->validated());
-            return redirect()->route('movement_type.index')->with('success', 'Movement Type updated successfully.');
+            return redirect()->route('movement_types.index')->with('success', 'Movement Type updated successfully.');
         }
         public function destroy(string $id) {
             $movementType = MovementType::findOrFail($id);
             $movementType->delete();
-            return redirect()->route('movement_type.index')->with('success', 'Movement Type deleted successfully.');
+            return redirect()->route('movement_types.index')->with('success', 'Movement Type deleted successfully.');
         }
 }

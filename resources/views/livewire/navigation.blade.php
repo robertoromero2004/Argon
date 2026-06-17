@@ -66,6 +66,15 @@
     <!-- Divider -->
     <hr class="my-3">
     <!-- Heading -->
+    <h6 class="navbar-heading text-muted">Inventario</h6>
+
+    <li class="nav-item {{ Request::route()->named('employees.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('employees.index') ? 'active' : '' }}"
+                href="{{ route('employees.index') }}" wire:navigate>
+                <i class="fas fa- text-purple"></i> Empleados
+            </a>
+        </li>
+
     <h6 class="navbar-heading text-muted">Ejemplos</h6>
     <!-- Navigation -->
     <ul class="navbar-nav mb-md-3">
@@ -104,5 +113,7 @@
             </a>
         </li>
         
+    
+
     </ul>
 </div>

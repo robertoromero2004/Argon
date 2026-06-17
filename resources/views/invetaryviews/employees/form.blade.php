@@ -13,15 +13,15 @@
                 <label class="form-control-label" for="input-type">Tipo</label>
                 <select id="input-type" name="type" class="form-control form-control-alternative">
                     <option value="">Seleccione un tipo</option>
-                    <option value="Perro" {{ old('type', $animal->type ?? '') == 'Perro' ? 'selected' : '' }}>Perro
+                    <option value="Perro" {{ old('type', $employee->type ?? '') == 'Perro' ? 'selected' : '' }}>Perro
                     </option>
-                    <option value="Gato" {{ old('type', $animal->type ?? '') == 'Gato' ? 'selected' : '' }}>Gato
+                    <option value="Gato" {{ old('type', $employee->type ?? '') == 'Gato' ? 'selected' : '' }}>Gato
                     </option>
-                    <option value="Pájaro" {{ old('type', $animal->type ?? '') == 'Pájaro' ? 'selected' : '' }}>Pájaro
+                    <option value="Pájaro" {{ old('type', $employee->type ?? '') == 'Pájaro' ? 'selected' : '' }}>Pájaro
                     </option>
-                    <option value="Reptil" {{ old('type', $animal->type ?? '') == 'Reptil' ? 'selected' : '' }}>Reptil
+                    <option value="Reptil" {{ old('type', $employee->type ?? '') == 'Reptil' ? 'selected' : '' }}>Reptil
                     </option>
-                    <option value="Pez" {{ old('type', $animal->type ?? '') == 'Pez' ? 'selected' : '' }}>Pez
+                    <option value="Pez" {{ old('type', $employee->type ?? '') == 'Pez' ? 'selected' : '' }}>Pez
                     </option>
                 </select>
             </div>

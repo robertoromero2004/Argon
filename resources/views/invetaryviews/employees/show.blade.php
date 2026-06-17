@@ -21,17 +21,19 @@
                         <h6 class="heading-small text-muted mb-4">Datos del Animal</h6>
                         <div class="pl-lg-4">
                             <label class="form-control-label" for="name"><i class="fas fa-signature"></i> Nombre</label>
-                            <p>{{ $animal->name }}</p>
+                            <p>{{ $employee->name }}</p>
 
-                            <label class="form-control-label" for="name"><i class="fas fa-graduation-cap"></i>
-                                Tipo</label>
-                            <p>{{ $animal->type }}</p>
+                            <label class="form-control-label" for="name"><i class="fas fa-signature"></i> Apellido</label>
+                            <p>{{ $employee->surname }}</p>
 
-                            <label class="form-control-label" for="name"><i class="fas fa-clock"></i> Color</label>
-                            <p>{{ $animal->color }}</p>
+                            <label class="form-control-label" for="name"><i class="fas fa-clock"></i> Cedula</label>
+                            <p>{{ $employee->card_id }}</p>
 
-                            <label class="form-control-label" for="name"><i class="fas fa-clock"></i> Edad</label>
-                            <p>{{ $animal->age }}</p>
+                            <label class="form-control-label" for="name"><i class="fas fa-clock"></i> Licencia de conducir</label>
+                            <p>{{ $employee->driver_licence }}</p>
+
+
+                            
                         </div>
                     </div>
                     <div class="col-md-6">

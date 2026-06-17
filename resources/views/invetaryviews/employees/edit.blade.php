@@ -1,5 +1,5 @@
 @extends('layouts.panel')
-@section('title', 'Animal/Update')
+@section('title', 'Employee/Update')
 
 @section('content')
     <div class="col-xl-12 order-xl-1">
@@ -10,14 +10,14 @@
                         <h3 class="mb-0"><i class="fas fa-plus-circle"></i> Actualizar Personal</h3>
                     </div>
                     <div class="col-4 text-right">
-                        <a href="{{ route('animals.index') }}" class="btn btn-sm btn-primary"><i
+                        <a href="{{ route('employees.index') }}" class="btn btn-sm btn-primary"><i
                                 class="fas fa-arrow-left"></i>
                             Volver</a>
                     </div>
                 </div>
             </div>
             <div class="card-body container-fluid">
-                <form action="{{ route('employees.update', $animal->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('employees.update', $employee->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     @include('inventaryviews.employees.form')
